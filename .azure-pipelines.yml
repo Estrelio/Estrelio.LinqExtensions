@@ -88,4 +88,4 @@ stages:
                     command: 'push'
                     packagesToPush: '$(System.ArtifactsDirectory)/**/*.nupkg'
                     nuGetFeedType: 'internal'
-                    publishVstsFeed: 'ab991a84-d099-4d3b-a4b5-499f44e67262/b11cf5e4-d130-4f1f-938e-36c5566b9fb6'
+                    publishVstsFeed: 'a340d3fb-b200-43a4-8467-ca8f730e0458/b6155c53-2a99-46fe-ad7d-106172b1783f'
