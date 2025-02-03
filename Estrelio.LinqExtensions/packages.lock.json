@@ -6,7 +6,7 @@
         "type": "Direct",
         "requested": "[0.0.1, )",
         "resolved": "0.0.1",
-        "contentHash": "TJk8q9avt0WW/s1NkzFWTzwQMaJNkLKYaanvKhuAMLutd4d5HkipZJXJGQroiQJdsftzp073/6C2sSuYGBCeMg==",
+        "contentHash": "I+I6XP+R+qhqILzxvSJ8TA4dkOB6d3lrjEqK9SQDLWOvsHFiNIO8jjEjv+spOJa6LTeJWHGErr7U78gQ4H1yaw==",
         "dependencies": {
           "Microsoft.CodeAnalysis": "4.12.0",
           "Microsoft.VisualStudio.Threading": "17.12.19",

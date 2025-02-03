@@ -38,8 +38,9 @@ stages:
             displayName: 'Restore NuGet Packages'
             inputs:
               command: 'restore'
-              feedsToUse: 'select'
               projects: '$(RestoreBuildProjects)'
+              feedsToUse: 'config'
+              nugetConfigPath: 'nuget.config'
 
           - task: DotNetCoreCLI@2
             displayName: 'Build Solution'
