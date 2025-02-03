@@ -10,6 +10,10 @@
         <Description>Contains extension methods for LINQ</Description>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    </PropertyGroup>
+
     <ItemGroup>
         <PackageReference Include="Estrelio.Linter" Version="0.0.1">
             <PrivateAssets>all</PrivateAssets>
