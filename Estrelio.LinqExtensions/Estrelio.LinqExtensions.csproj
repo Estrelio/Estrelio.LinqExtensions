@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
         <PackageId>Estrelio.LinqExtensions</PackageId>
-        <version>0.0.2</version>
+        <version>0.0.3</version>
         <authors>TabooSun</authors>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
