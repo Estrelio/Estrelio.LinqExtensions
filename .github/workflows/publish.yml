@@ -20,10 +20,10 @@ jobs:
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: dotnet restore
+      - run: dotnet restore Estrelio.LinqExtensions.sln
 
-      - run: dotnet build --configuration Release --no-restore
+      - run: dotnet build Estrelio.LinqExtensions.sln --configuration Release --no-restore
 
-      - run: dotnet pack --configuration Release --no-build --output nupkgs
+      - run: dotnet pack Estrelio.LinqExtensions/Estrelio.LinqExtensions.csproj --configuration Release --no-build --output nupkgs
 
       - run: dotnet nuget push "nupkgs/*.nupkg" --skip-duplicate
