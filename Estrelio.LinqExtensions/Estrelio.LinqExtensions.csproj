@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
         <PackageId>Estrelio.LinqExtensions</PackageId>
-        <version>0.0.7</version>
+        <version>0.0.8</version>
         <authors>TabooSun</authors>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
@@ -15,6 +15,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <!-- The floor is deliberately the first 9.0 release: a higher one would force a downgrade error (NU1605)
+             on any consumer pinned to an older EF Core 9 patch. Consumers on a newer EF Core resolve to theirs. -->
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
         <PackageReference Include="Estrelio.Linter" Version="0.0.6">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
