@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: read
+      contents: read
+    env:
+      NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.x'
+          source-url: https://nuget.pkg.github.com/Estrelio/index.json
+
+      - run: dotnet restore Estrelio.LinqExtensions.sln
+
+      - run: dotnet build Estrelio.LinqExtensions.sln --configuration Release --no-restore
+
+      - run: dotnet pack Estrelio.LinqExtensions/Estrelio.LinqExtensions.csproj --configuration Release --no-build --output nupkgs
